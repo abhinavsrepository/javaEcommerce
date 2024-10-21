@@ -1,6 +1,7 @@
 package com.mvhgroup.modal;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Entity;
 import lombok.*;
 @Entity
 @Getter
@@ -12,6 +13,12 @@ import lombok.*;
 public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
+
+    @ManyToOne
+    @JsonIgnore
+    private Cart cart;
+
+    private Product product;
 
 }
