@@ -21,4 +21,13 @@ public class CartItem {
 
     private Product product;
 
+    private String size ;
+    private int quantity = 1;
+    private Integer mrpPrice;
+    private Integer sellingPrice;
+    private Long userId;
+
+
+
+
 }
